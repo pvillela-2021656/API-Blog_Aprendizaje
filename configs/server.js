@@ -5,6 +5,7 @@ import express from "express"
 import helmet from "helmet"
 import morgan from "morgan"
 import authRoutes from "../src/auth/auth.routes.js"
+import commentaryRoutes from "../src/commentaries/commentary.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 import publicationRoutes from "../src/publication/publication.routes.js"
 import { dbConnection } from "./mongo.js"
@@ -22,6 +23,7 @@ const middlewares = (app) => {
 const routes = (app) => {
     app.use("/blogAprendizaje/v1/auth", authRoutes);
     app.use("/blogAprendizaje/v1/publication", publicationRoutes)
+    app.use("/blogAprendizaje/v1/commentary", commentaryRoutes)
     app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 

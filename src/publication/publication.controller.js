@@ -92,3 +92,61 @@ export const deletePublication = async (req, res) => {
         });
     }
 }
+
+export const getPublicationsByCourseWithCommentCount = async (req, res) => {
+    const { course } = req.body;
+
+    if (!course || !["TALLER", "TECNOLOGIA", "PRACTICA"].includes(course.toUpperCase())) {
+        return res.status(400).json({
+            message: "You must provide a valid course: TALLER, TECNOLOGIA or PRACTICA."
+        });
+    }
+
+    try {
+        const publications = await Publication.aggregate([
+            { $match: { course: course.toUpperCase() } },
+            {
+                $lookup: {
+                    from: 'comments',
+                    localField: '_id',
+                    foreignField: 'publicationId',
+                    as: 'comments'
+                }
+            },
+            {
+                $addFields: {
+                    commentsCount: { $size: '$comments' }
+                }
+            },
+            { $sort: { commentsCount: -1 } },
+            { $project: { comments: 0 } }
+        ]);
+
+        res.status(200).json({
+            message: `Publications for course ${course} ordered by comment count`,
+            publications
+        });
+    } catch (error) {
+        res.status(500).json({
+            message: "Error retrieving publications by comment count",
+            error: error.message
+        });
+    }
+};
+
+export const getRecentPublications = async (req, res) => {
+    try {
+        const publications = await Publication.find()
+            .sort({ dateOfCreation: -1 });
+
+        return res.status(200).json({
+            message: "Publications ordered by most recent",
+            publications
+        });
+    } catch (err) {
+        return res.status(500).json({
+            message: "Error retrieving recent publications",
+            error: err.message
+        });
+    }
+};

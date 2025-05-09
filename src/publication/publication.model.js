@@ -13,7 +13,8 @@ const publicationSchema = new Schema({
     },
     course: {
         type: String,
-        required: [true, "Course of this publication IS required."]
+        required: [true, "Course of this publication IS required."],
+        enum: ["TALLER", "TECNOLOGIA", "PRACTICA"]
     },
     dateOfCreation: {
         type: Date,

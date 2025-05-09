@@ -37,3 +37,18 @@ export const deletePublicationValidator = [
     validarCampos,
     handleErrors
 ]
+
+export const getPublicationsByCourseWithCommentCountValidator = [
+    validateJWT,
+    hasRoles("ADMIN_ROLE", "VISITOR_ROLE"),
+    body("course").notEmpty().withMessage("Course IS required.").isIn(["TALLER", "TECNOLOGIA", "PRACTICA"]).withMessage("Invalid course value."),
+    validarCampos,
+    handleErrors
+];
+
+export const getRecentPublicationsValidator = [
+    validateJWT,
+    hasRoles("ADMIN_ROLE", "VISITOR_ROLE"),
+    validarCampos,
+    handleErrors
+];

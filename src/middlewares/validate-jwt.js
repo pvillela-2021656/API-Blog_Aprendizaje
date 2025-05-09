@@ -14,7 +14,7 @@ export const validateJWT = async (req, res, next) => {
 
         token = token.replace(/^Bearer\s+/, "")
 
-        const { uid } = jwt.verify(token, process.env.SECRETORPRIVATEKEY)
+        const { uid } = jwt.verify(token, process.env.SECRET_OR_PRIVATE_KEY)
 
         const user = await User.findById(uid)
 
@@ -32,7 +32,7 @@ export const validateJWT = async (req, res, next) => {
             })
         }
 
-        req.usuario = user
+        req.user = user
         next()
     } catch (err) {
         return res.status(500).json({
