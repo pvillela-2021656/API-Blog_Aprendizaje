@@ -5,8 +5,8 @@ import { validateJWT } from './validate-jwt.js';
 import { hasRoles } from './validate-roles.js';
 
 export const createPublicationValidator = [
-    validateJWT,
-    hasRoles("ADMIN_ROLE"),
+    //validateJWT,
+    //hasRoles("ADMIN_ROLE"),
     body("title").notEmpty().withMessage("Title IS required."),
     body("description").notEmpty().withMessage("Description IS required."),
     body("course").notEmpty().withMessage("Course IS required."),
@@ -16,8 +16,8 @@ export const createPublicationValidator = [
 ]
 
 export const getPublicationsValidator = [
-    validateJWT,
-    hasRoles("ADMIN_ROLE"),
+    //validateJWT,
+    //hasRoles("ADMIN_ROLE"),
     validarCampos,
     handleErrors
 ]

@@ -7,7 +7,6 @@ export const createCommentaryValidator = [
     //hasRoles("ADMIN_ROLE"),
     body("author").notEmpty().withMessage("Author IS required."),
     body("content").notEmpty().withMessage("Commentary IS required."),
-    body("dateOfComment").notEmpty().withMessage("Publication ID IS required."),
     body("publication").notEmpty().withMessage("Publication ID IS required."),
     validarCampos,
     handleErrors

@@ -2,7 +2,7 @@ import User from './user.model.js';
 
 export const currentUser = async (req, res) => {
     try {
-        const userID = "68214c4c4f20f152c62ebe0b";
+        const userID = "68211c812215f1510b6e6ca4";
         const user = await User.findById(userID);
 
         if (!user) {
