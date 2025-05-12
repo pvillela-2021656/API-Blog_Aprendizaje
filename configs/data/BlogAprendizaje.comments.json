@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "68218682cb023ed4a49edd51"
+  },
+  "author": {
+    "$oid": "68214c4c4f20f152c62ebe0b"
+  },
+  "content": "iojanojnakmdiojasd",
+  "publication": {
+    "$oid": "681d95fdd91fd15897857061"
+  },
+  "dateOfComment": {
+    "$date": "2025-05-12T05:26:26.863Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-12T05:26:26.864Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-12T05:26:26.864Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6821870c246d659768b8d725"
+  },
+  "author": {
+    "$oid": "68211c812215f1510b6e6ca4"
+  },
+  "content": "sdfsadfaasda",
+  "publication": {
+    "$oid": "681d95fdd91fd15897857061"
+  },
+  "dateOfComment": {
+    "$date": "2025-05-12T05:28:44.600Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-12T05:28:44.604Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-12T05:28:44.604Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682191389815addd858a80b0"
+  },
+  "author": {
+    "$oid": "681d7d259d5ef08c6730918b"
+  },
+  "content": "LNKKJILHVKHV",
+  "dateOfComment": {
+    "$date": "2025-02-02T00:00:00.000Z"
+  },
+  "publication": {
+    "$oid": "681d95fdd91fd15897857061"
+  },
+  "createdAt": {
+    "$date": "2025-05-12T06:12:08.745Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-12T06:12:08.745Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6821913ecd505f499025ca36"
+  },
+  "author": {
+    "$oid": "681d7d259d5ef08c6730918b"
+  },
+  "content": "LNKKJILHVKHV",
+  "dateOfComment": {
+    "$date": "2025-02-02T00:00:00.000Z"
+  },
+  "publication": {
+    "$oid": "681d95fdd91fd15897857061"
+  },
+  "createdAt": {
+    "$date": "2025-05-12T06:12:14.538Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-12T06:12:14.538Z"
+  }
+}]

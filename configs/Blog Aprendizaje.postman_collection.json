@@ -90,7 +90,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODFkN2QyNTlkNWVmMDhjNjczMDkxOGIiLCJpYXQiOjE3NDY3NjkzODcsImV4cCI6MTc0Njc3Mjk4N30.nZBKIAJHO1SkehO8uWsGagANRksjQJdBug838gIqf8U",
+									"value": "",
 									"type": "string"
 								}
 							]
@@ -99,7 +99,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Prueba2\",\r\n    \"description\": \"Popo2\",\r\n    \"course\": \"TALLER\",\r\n    \"dateOfCreation\": \"2025-02-02\"\r\n}",
+							"raw": "{\r\n    \"title\": \"Gestion Hotelera\",\r\n    \"description\": \"Publicación hecha para la API de Gestión hotelera, ASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS \",\r\n    \"course\": \"TALLER\",\r\n    \"dateOfCreation\": \"2025-02-02\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -301,7 +301,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODFkN2QyNTlkNWVmMDhjNjczMDkxOGIiLCJpYXQiOjE3NDY3NzAyMTYsImV4cCI6MTc0Njc3MzgxNn0.hqsb6mF7lS89MJ4CwZ6PQ6SO-txTcNb7MBR9vavmtmg",
+									"value": "",
 									"type": "string"
 								}
 							]
@@ -571,6 +571,19 @@
 								"681d8f80c8df2ba61de52226"
 							]
 						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Usuario Actual",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
