@@ -1,0 +1,68 @@
+[{
+  "_id": {
+    "$oid": "681d95fdd91fd15897857061"
+  },
+  "title": "Prueba2",
+  "description": "Popo2",
+  "course": "TALLER",
+  "dateOfCreation": {
+    "$date": "2025-02-02T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-09T05:43:25.777Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-09T05:43:25.777Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681d9a89a9cf67612240d189"
+  },
+  "title": "Prueba2",
+  "description": "Popo2",
+  "course": "TECNOLOGIA",
+  "dateOfCreation": {
+    "$date": "2025-02-02T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-09T06:02:49.257Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-09T06:02:49.257Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681d9a8da9cf67612240d18c"
+  },
+  "title": "Prueba2",
+  "description": "Popo2",
+  "course": "PRACTICA",
+  "dateOfCreation": {
+    "$date": "2025-02-02T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-09T06:02:53.985Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-09T06:02:53.985Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68216e25934c04210aea4831"
+  },
+  "title": "Gestion Hotelera",
+  "description": "Publicación hecha para la API de Gestión hotelera, ASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS ",
+  "course": "TALLER",
+  "dateOfCreation": {
+    "$date": "2025-02-02T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-05-12T03:42:29.840Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-12T03:42:29.840Z"
+  }
+}]

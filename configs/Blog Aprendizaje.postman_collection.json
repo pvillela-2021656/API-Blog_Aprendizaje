@@ -1,0 +1,593 @@
+{
+	"info": {
+		"_postman_id": "64f86c5e-979c-43a6-9131-92b90b7d2128",
+		"name": "Blog Aprendizaje",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41958063"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Crear Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pablo\",\r\n    \"surname\": \"David\",\r\n    \"username\": \"Pvillela\",\r\n    \"email\": \"pvillela-2021656@kinal.edu.gt\",\r\n    \"password\": \"Roland#02\",\r\n    \"role\": \"ADMIN_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3009/blogAprendizaje/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3009",
+							"path": [
+								"blogAprendizaje",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auth Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"pvillela-2021656@kinal.edu.gt\",\r\n  \"username\": \"Pvillela\",\r\n  \"password\": \"Roland#02\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3009/blogAprendizaje/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3009",
+							"path": [
+								"blogAprendizaje",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Publication",
+			"item": [
+				{
+					"name": "Crear Publicación",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Gestion Hotelera\",\r\n    \"description\": \"Publicación hecha para la API de Gestión hotelera, ASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS \",\r\n    \"course\": \"TALLER\",\r\n    \"dateOfCreation\": \"2025-02-02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3009/blogAprendizaje/v1/publication/createPublication",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3009",
+							"path": [
+								"blogAprendizaje",
+								"v1",
+								"publication",
+								"createPublication"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar por curso [TALLER]",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODFkN2QyNTlkNWVmMDhjNjczMDkxOGIiLCJpYXQiOjE3NDY3NzAyMTYsImV4cCI6MTc0Njc3MzgxNn0.hqsb6mF7lS89MJ4CwZ6PQ6SO-txTcNb7MBR9vavmtmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course\": \"TALLER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3009/blogAprendizaje/v1/publication/filterPublicationsByCourse",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3009",
+							"path": [
+								"blogAprendizaje",
+								"v1",
+								"publication",
+								"filterPublicationsByCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar por curso [TECNOLOGIA]",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODFkN2QyNTlkNWVmMDhjNjczMDkxOGIiLCJpYXQiOjE3NDY3NzAyMTYsImV4cCI6MTc0Njc3MzgxNn0.hqsb6mF7lS89MJ4CwZ6PQ6SO-txTcNb7MBR9vavmtmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course\": \"TECNOLOGIA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3009/blogAprendizaje/v1/publication/filterPublicationsByCourse",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3009",
+							"path": [
+								"blogAprendizaje",
+								"v1",
+								"publication",
+								"filterPublicationsByCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar por curso [PRACTICA]",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODFkN2QyNTlkNWVmMDhjNjczMDkxOGIiLCJpYXQiOjE3NDY3NzAyMTYsImV4cCI6MTc0Njc3MzgxNn0.hqsb6mF7lS89MJ4CwZ6PQ6SO-txTcNb7MBR9vavmtmg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course\": \"PRACTICA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3009/blogAprendizaje/v1/publication/filterPublicationsByCourse",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3009",
+							"path": [
+								"blogAprendizaje",
+								"v1",
+								"publication",
+								"filterPublicationsByCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Publicaciones",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODFkN2QyNTlkNWVmMDhjNjczMDkxOGIiLCJpYXQiOjE3NDY3NjQxMDMsImV4cCI6MTc0Njc2NzcwM30.0fE2sMNK5cc_UQ-SZitKAB1P7uG0-5D83qbDvpG5Lr8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3009/blogAprendizaje/v1/publication/getPublications",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3009",
+							"path": [
+								"blogAprendizaje",
+								"v1",
+								"publication",
+								"getPublications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar por fecha mas reciente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3009/blogAprendizaje/v1/publication/getRecentPublications",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3009",
+							"path": [
+								"blogAprendizaje",
+								"v1",
+								"publication",
+								"getRecentPublications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Publicacion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODFkN2QyNTlkNWVmMDhjNjczMDkxOGIiLCJpYXQiOjE3NDY3NjQxMDMsImV4cCI6MTc0Njc2NzcwM30.0fE2sMNK5cc_UQ-SZitKAB1P7uG0-5D83qbDvpG5Lr8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Prueba3\",\r\n    \"description\": \"Popo3\",\r\n    \"course\": \"Tecnologia3\",\r\n    \"dateOfCreation\": \"2025-02-02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3009/blogAprendizaje/v1/publication/updatePublication/681d8188d5e8e24fc02602f3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3009",
+							"path": [
+								"blogAprendizaje",
+								"v1",
+								"publication",
+								"updatePublication",
+								"681d8188d5e8e24fc02602f3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Publicación",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODFkN2QyNTlkNWVmMDhjNjczMDkxOGIiLCJpYXQiOjE3NDY3NjQxMDMsImV4cCI6MTc0Njc2NzcwM30.0fE2sMNK5cc_UQ-SZitKAB1P7uG0-5D83qbDvpG5Lr8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3009/blogAprendizaje/v1/publication/deletePublication/681d8324d5e8e24fc02602fd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3009",
+							"path": [
+								"blogAprendizaje",
+								"v1",
+								"publication",
+								"deletePublication",
+								"681d8324d5e8e24fc02602fd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Commentary",
+			"item": [
+				{
+					"name": "Crear Comentario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODFkN2QyNTlkNWVmMDhjNjczMDkxOGIiLCJpYXQiOjE3NDY3Njc0NTQsImV4cCI6MTc0Njc3MTA1NH0.7tgj41z2HTASfuygZSZPGMAfAjx91m11foio_qjtjnU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author\": \"681d7d259d5ef08c6730918b\",\r\n    \"content\": \"LNKKJILHVKHV\",\r\n    \"dateOfComment\": \"2025-02-02\",\r\n    \"publication\": \"681d8188d5e8e24fc02602f3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3009/blogAprendizaje/v1/commentary/createCommentary",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3009",
+							"path": [
+								"blogAprendizaje",
+								"v1",
+								"commentary",
+								"createCommentary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Comentarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODFkN2QyNTlkNWVmMDhjNjczMDkxOGIiLCJpYXQiOjE3NDY3Njc0NTQsImV4cCI6MTc0Njc3MTA1NH0.7tgj41z2HTASfuygZSZPGMAfAjx91m11foio_qjtjnU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3009/blogAprendizaje/v1/commentary/getCommentaries",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3009",
+							"path": [
+								"blogAprendizaje",
+								"v1",
+								"commentary",
+								"getCommentaries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Comentario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODFkN2QyNTlkNWVmMDhjNjczMDkxOGIiLCJpYXQiOjE3NDY3Njc0NTQsImV4cCI6MTc0Njc3MTA1NH0.7tgj41z2HTASfuygZSZPGMAfAjx91m11foio_qjtjnU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author\": \"681d7d259d5ef08c6730918b\",\r\n    \"content\": \"aASDASDASDASDASD\",\r\n    \"dateOfComment\": \"2025-02-08\",\r\n    \"publication\": \"681d8188d5e8e24fc02602f3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3009/blogAprendizaje/v1/commentary/updateCommentary/681d8e7ac8df2ba61de5221f",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3009",
+							"path": [
+								"blogAprendizaje",
+								"v1",
+								"commentary",
+								"updateCommentary",
+								"681d8e7ac8df2ba61de5221f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Comentario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODFkN2QyNTlkNWVmMDhjNjczMDkxOGIiLCJpYXQiOjE3NDY3Njc0NTQsImV4cCI6MTc0Njc3MTA1NH0.7tgj41z2HTASfuygZSZPGMAfAjx91m11foio_qjtjnU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3009/blogAprendizaje/v1/commentary/deleteCommentary/681d8f80c8df2ba61de52226",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3009",
+							"path": [
+								"blogAprendizaje",
+								"v1",
+								"commentary",
+								"deleteCommentary",
+								"681d8f80c8df2ba61de52226"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Usuario Actual",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

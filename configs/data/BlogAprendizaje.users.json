@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "68211c812215f1510b6e6ca4"
+  },
+  "name": "NAME_ADMIN",
+  "surname": "SURNAME_ADMIN",
+  "username": "ADMIN",
+  "email": "ADMIN@kinal.edu.gt",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$bJT0m7MsW8uqpy0EFfw8Lg$l7EMvanu0+MaV2UmSPeDjVgSruX6CzhRfBlvTTPJRII",
+  "role": "ADMIN_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "68214c4c4f20f152c62ebe0b"
+  },
+  "name": "Pablo",
+  "surname": "David",
+  "username": "Pvillela",
+  "email": "pvillela-2021656@kinal.edu.gt",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$yLgOkSUnHqeUFjs5YZmHxw$CWn2bqCu/aDOMQu+WvDPDa53T+Jzcb2EZihaICfHdkw",
+  "role": "ADMIN_ROLE",
+  "status": true
+}]
