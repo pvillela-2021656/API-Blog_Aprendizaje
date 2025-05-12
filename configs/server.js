@@ -8,6 +8,7 @@ import authRoutes from "../src/auth/auth.routes.js"
 import commentaryRoutes from "../src/commentaries/commentary.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 import publicationRoutes from "../src/publication/publication.routes.js"
+import userRoutes from "../src/user/user.routes.js"
 import { dbConnection } from "./mongo.js"
 import { swaggerDocs, swaggerUi } from "./swagger.js"
 
@@ -24,6 +25,7 @@ const routes = (app) => {
     app.use("/blogAprendizaje/v1/auth", authRoutes);
     app.use("/blogAprendizaje/v1/publication", publicationRoutes)
     app.use("/blogAprendizaje/v1/commentary", commentaryRoutes)
+    app.use("/blogAprendizaje/v1/user", userRoutes)
     app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 
