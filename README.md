@@ -1,3 +1,6 @@
+##IMPORTANTE
+#COLOCAR EL ID DEL USUARIO A USAR EN EL CONTROLLER (Cambia cada que se genera automaticamente)
+
 # 📝 API - Blog de Aprendizaje
 
 Este proyecto es el backend de un **Blog de Aprendizaje** desarrollado con el stack **MERN (MongoDB, Express, React, Node.js)**. Permite la gestión de publicaciones relacionadas con cursos técnicos y la recolección de comentarios de visitantes de forma abierta (sin autenticación).
