@@ -1,3 +1,54 @@
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Publication:
+ *       type: object
+ *       properties:
+ *         uid:
+ *           type: string
+ *           description: ID único de la publicación.
+ *           example: "60d21b4667d0d8992e610c85"
+ *         title:
+ *           type: string
+ *           description: Título de la publicación.
+ *           maxLength: 50
+ *           example: "Introducción a BIM"
+ *         description:
+ *           type: string
+ *           description: Descripción de la publicación.
+ *           maxLength: 500
+ *           example: "Esta publicación explica los conceptos básicos de BIM."
+ *         course:
+ *           type: string
+ *           description: Curso al que pertenece la publicación.
+ *           enum:
+ *             - TALLER
+ *             - TECNOLOGIA
+ *             - PRACTICA
+ *           example: "TALLER"
+ *         dateOfCreation:
+ *           type: string
+ *           format: date-time
+ *           description: Fecha de creación de la publicación.
+ *           example: "2024-05-21T15:30:00.000Z"
+ *         createdAt:
+ *           type: string
+ *           format: date-time
+ *           description: Fecha de creación (generada automáticamente por Mongoose).
+ *           example: "2024-05-21T15:30:00.000Z"
+ *         updatedAt:
+ *           type: string
+ *           format: date-time
+ *           description: Fecha de última actualización (generada automáticamente por Mongoose).
+ *           example: "2024-05-21T15:30:00.000Z"
+ *       required:
+ *         - title
+ *         - description
+ *         - course
+ *         - dateOfCreation
+ */
+
 import { Schema, model } from 'mongoose';
 
 const publicationSchema = new Schema({
