@@ -1,5 +1,5 @@
-##IMPORTANTE
-#COLOCAR EL ID DEL USUARIO A USAR EN EL CONTROLLER (Cambia cada que se genera automaticamente)
+## IMPORTANTE
+# COLOCAR EL ID DEL USUARIO A USAR EN EL CONTROLLER (Cambia cada que se genera automaticamente)
 
 # 📝 API - Blog de Aprendizaje
 
